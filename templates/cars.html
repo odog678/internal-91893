@@ -12,8 +12,8 @@
                 <h3>{{ car[1] + " " + car[2] }}</h3>
                 <p><strong>Maker:</strong> {{ car[1] }}</p>
                 <p><strong>Model:</strong> {{ car[2] }}</p>
-                <a href="{{ url_for('car', id=car[0]) }}">
-                    <img src="{{ url_for('static', filename='images/' + car[3]) }}" alt="{{ car[2] }}" width="200">
+               
+        <img src="{{ url_for('static', filename='images/' + car[3]) }}" alt="{{ car[2] }}" width="200">
                 </a>
             </div>
         {% endfor %}

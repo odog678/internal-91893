@@ -4,14 +4,35 @@
 {% block body %}
 
 
-    <div class="three-column-grid">
-        {% for track in tracks %}
-            <div class="track-card">
-                <h3>{{ track[1] + " " + track[2] }}</h3>
-                <p><strong>Maker:</strong> {{ track[1] }}</p>
+  <!-- THE GALLERY GRID ---------------------------------------------------
+       .gallery is a CSS Grid. Look at the rule in style.css: we never say
+       how many columns there are. The browser fits as many as will hold
+       240px and reflows on its own. No media queries needed. -->
+  <ul class="gallery">
 
-                <img src="{{ url_for('static', filename='images/' + track[3]) }}" alt="{{ track[2] }}" width="200">
-            </div>
+        {% for track in tracks %}
+
+        <li class="tile">
+            <!-- The WHOLE tile is one link, so the image and the caption are
+                    both clickable. That is a much bigger target than a small
+                    "view details" button, especially on a phone. -->
+            <a href="#">
+
+                <!-- Square crop: gallery tiles look wrong at mixed heights, so we
+                    ask Picsum for a square and let CSS crop it (see .tile img). -->
+                <img src="{{ url_for('static', filename='images/' + track[3]) }}"
+                    alt=""{{ track[2] }}"
+                    width="600" height="400" loading="lazy">
+
+                <span class="tile-caption">
+                <span class="badge">{{ track[2] }}</span>
+                <span class="tile-title">{{ track[1] }}</span>
+                </span>
+
+            </a>
+        </li>
+
         {% endfor %}
-    </div>
+
+  </ul>
 {% endblock %}

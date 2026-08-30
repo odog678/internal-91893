@@ -106,3 +106,66 @@ color: #22241f;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+/* --- Gallery page ------------------------------------------------------
+   The listing above uses FLEXBOX, because each row is a one-dimensional
+   arrangement: image, then text, side by side.
+
+   The gallery uses CSS GRID, because tiles are two-dimensional: they wrap
+   into rows AND columns. Use flexbox for a line of things, grid for a
+   grid of things. */
+
+.gallery {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+
+  display: grid;
+  /* Read this as: "make as many equal columns as will fit, where each one is
+     at least 240px wide and at most one fair share of the space."
+     auto-fill decides the column count for us, so on a phone you get one
+     column, on a laptop four — with NO media query. This single line
+     replaces about fifteen lines of breakpoint code. */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+/* The whole tile is one link. Removing the underline and inheriting the
+   text colour stops it looking like a wall of blue links. */
+.tile a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;    /* force a square box... */
+  object-fit: cover;      /* ...and crop the photo to fill it, not squash it */
+}
+
+.tile-caption {
+  display: block;
+  padding: 12px;
+  border-top: 1px solid #eee;
+}
+
+.tile-title {
+  display: block;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* Lift the tile slightly on hover so it reads as clickable. */
+.tile:hover {
+  border-color: #333;
+}
+
+.tile:hover .tile-title {
+  text-decoration: underline;
+}
