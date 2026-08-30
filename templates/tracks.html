@@ -1,0 +1,17 @@
+<!-- Home Page Content -->
+{% extends "layout.html" %}
+ 
+{% block body %}
+
+
+    <div class="three-column-grid">
+        {% for track in tracks %}
+            <div class="track-card">
+                <h3>{{ track[1] + " " + track[2] }}</h3>
+                <p><strong>Maker:</strong> {{ track[1] }}</p>
+
+                <img src="{{ url_for('static', filename='images/' + track[3]) }}" alt="{{ track[2] }}" width="200">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

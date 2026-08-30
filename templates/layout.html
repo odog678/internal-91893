@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Font (replace 'Righteous' with your chosen font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fascinate&family=Train+One&display=swap" rel="stylesheet">
+
+    <!-- W3.CSS framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Your custom CSS (must come after W3.CSS to override it) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="w3-container">
+    <!-- Side nav -->
+<div class="sidenav">
+  <a href="{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="{{ url_for('cars') }}"><i class="fa fa-fw fa-car"></i> Cars</a>
+  <a href="{{ url_for('tracks') }}"><i class="fa fa-fw fa-regular fa-circle"></i> Tracks</a>
+</div>
+
+<div class="main">
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <div class="wrap">
+        <a class="logo" href="{{ url_for('home') }}">GT7</a>
+        </div>
+    </header>
+
+    
+
+    
+    <h1>{{ title }}</h1>
+
+    <!-- Content Block -->
+    {% block body %}{% endblock %}
+
+    </div>
+</body>
+</html>

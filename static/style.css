@@ -1,0 +1,108 @@
+
+
+body {
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Medium', 'HelveticaNeue-Light', 'Roboto', sans-serif;
+}
+
+/* Style for Car Details Page */
+/* family=Bungee+Shade&family=Fascinate&family=Train+One */
+h1 {
+    color: #00B7A8;
+    font-family: 'Bungee Shade';
+}
+
+h2 {
+    color: rgb(0, 55, 255);
+    font-family: 'Train One';
+}
+
+h3 {
+    color: #EAEA6A;
+    font-family: 'Train One';
+}
+  
+h3{
+color: #CCCCC6;
+    font-family: 'Train One';
+
+}    
+
+h3{
+color: #22241f;
+    font-family: 'Train One';
+
+}    
+
+/* --- Header ------------------------------------------------------------ */
+
+.site-header {
+  background: #fff;
+  border-bottom: 2px solid #333;
+  padding: 16px 0;
+}
+
+.site-header .wrap {
+  display: flex;                   /* logo left, nav right */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  padding: 8px 16px;
+}
+
+.site-nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  border-bottom-color: #333;
+}
+
+/* --- Side Navigation ------------------------------------------------------------ */
+
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
