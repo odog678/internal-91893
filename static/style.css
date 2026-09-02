@@ -145,8 +145,8 @@ color: #22241f;
 
 .tile img {
   width: 100%;
-  aspect-ratio: 1 / 1;    /* force a square box... */
-  object-fit: cover;      /* ...and crop the photo to fill it, not squash it */
+  aspect-ratio: 3 / 2;    /* 600x400 images keep their original proportions */
+  object-fit: contain;    /* show the whole image instead of cropping it */
 }
 
 .tile-caption {
