@@ -21,7 +21,7 @@
             <!-- Square crop: gallery tiles look wrong at mixed heights, so we
                 ask Picsum for a square and let CSS crop it (see .tile img). -->
             <img src="{{ url_for('static', filename='images/' + track[3]) }}"
-                alt=""{{ track[2] }}"
+                alt="{{ track[2] }}"
                 width="600" height="400" loading="lazy">
 
             <span class="tile-caption">
@@ -29,7 +29,12 @@
             <span class="tile-title">{{ track[1] }}</span>
             </span>
 
-            <iframe width="600" height="338" src="https://www.youtube.com/embed/N9omw44Z-U4?si=w6W5_OhHRb6H5WeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/N9omw44Z-U4?si=w6W5_OhHRb6H5WeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/A5GUWzbNSi0?si=Fni5pEvXeeiqYfYW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/Ii_gCbNZFck?si=PtC8wYuYw_vevkv-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/tySWV34L_EA?si=TOBZF9qPKRwTcva1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/ifWBzC0MG6w?si=YI5zslqd99cCl8Ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/HtJiQvK8M5o?si=02HUXT904SMV5Zxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </li>
 
         {% endfor %}
