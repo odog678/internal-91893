@@ -12,8 +12,11 @@
     <!-- W3.CSS framework -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Your custom CSS (must come after W3.CSS to override it) -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- custom CSS (must come after W3.CSS to override it) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+
+
+
 
     <!-- Load an icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,13 +39,13 @@
     </header>
 
     
-
-    
-    <h1>{{ title }}</h1>
+    {% block heading %}<h1>{{ title }}</h1>{% endblock %}
 
     <!-- Content Block -->
     {% block body %}{% endblock %}
 
     </div>
+    <!-- Link external JS file -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>

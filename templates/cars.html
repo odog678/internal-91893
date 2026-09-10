@@ -1,21 +1,34 @@
 <!-- Home Page Content -->
 {% extends "layout.html" %}
- 
+{% block heading %}{% endblock %}
+
 {% block body %}
-    <h1>Cars
-    <img src="{{ url_for('static', filename='images/matt.avif') }}" alt="Matt" width="60%">
+          
+
+
+  <!-- THE GALLERY GRID ---------------------------------------------------
+       .gallery is a CSS Grid. Look at the rule in style.css: we never say
+       how many columns there are. The browser fits as many as will hold
+       240px and reflows on its own. No media queries needed. -->
+  <ul class="gallery">
+
+
+        {% for car in cars %}
+            
+
+         <li class="tile">
+            <!-- The WHOLE tile is one link, so the image and the caption are
+                    both clickable. That is a much bigger target than a small
+                    "view details" button, especially on a phone. -->
+
+
+            
+            <img src="{{ url_for('static', filename='images/' + car[3]) }}" alt="{{ car[2] }}" width="200">
+            <h3>{{ car[1] + " " + car[2] }}</h3>
+
+         </li>
+        {% endfor %}
 
     
-    <div class="three-column-grid">
-        {% for car in cars %}
-            <div class="car-card">
-                <h3>{{ car[1] + " " + car[2] }}</h3>
-                <p><strong>Maker:</strong> {{ car[1] }}</p>
-                <p><strong>Model:</strong> {{ car[2] }}</p>
-               
-        <img src="{{ url_for('static', filename='images/' + car[3]) }}" alt="{{ car[2] }}" width="200">
-                </a>
-            </div>
-        {% endfor %}
-    </div>
+  </ul>
 {% endblock %}
