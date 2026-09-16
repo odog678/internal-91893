@@ -152,7 +152,8 @@ h3 {
 .tile-title {
   display: block;
   margin-top: 6px;
-  font-weight: bold;
+  font-weight: bold;  
+  height: 80px;
 }
 
 
