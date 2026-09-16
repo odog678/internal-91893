@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ title }}</title>
     <!-- Google Font (replace 'Righteous' with your chosen font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,11 @@
     <!-- custom CSS (must come after W3.CSS to override it) -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
 
-
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
 
 
     <!-- Load an icon library -->
@@ -28,6 +32,11 @@
   <a href="{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> Home</a>
   <a href="{{ url_for('cars') }}"><i class="fa fa-fw fa-car"></i> Cars</a>
   <a href="{{ url_for('tracks') }}"><i class="fa fa-fw fa-regular fa-circle"></i> Tracks</a>
+</div>
+
+<div class="quick-links">
+  <a target="_blank" href="https://www.gtplanet.net/category/gran-turismo-7/">GTplanet</a>
+  <a target="_blank" href="https://www.gran-turismo.com/us/products/gt7/">gran turismo</a>
 </div>
 
 <div class="main">
